@@ -50,12 +50,7 @@ p {
   color: rgb(168, 168, 168);
 }
 
-#player-bar{
-  height: 10px;
-  background-color: rgb(168, 168, 168);
-  width:65%;
-  border-radius: 3px;
-}
+
 
 i {
 	color: #ccc;
@@ -80,6 +75,149 @@ flex-grow: 1;
 background-color: #575555;
 }
 
+
+
+
+/*CODE BARRE DE PROGRESSION */
+
+​
+
+#progress{
+
+margin: auto;
+
+}
+
+progress{
+
+    display: inline-block;
+
+    -moz-box-sizing: border-box;
+
+         box-sizing: border-box;
+         width:100%;
+
+    height: 12px;
+
+    padding: 0px 0px 0px 0px;
+
+    background: rgba(242,242,242,.9);
+
+    border: 0px solid rgba(0,0,0,.2);
+
+    border-radius: 4px;
+
+}
+
+​
+
+/* Style de la barre pour Chrome*/
+
+progress::-webkit-progress-value{
+
+
+
+    border-radius:10px;
+
+    background: #09c;
+
+    background:
+
+      rgba(125,125,125,.9);
+
+    background-size: 300px 20px, auto, auto;
+
+    background-position: -300px 0, top, top;
+
+    background-position: top right, top, top;
+
+​
+
+}
+
+​
+
+progress::-webkit-progress-bar{
+
+    background: transparent;
+
+}
+
+​
+
+progress[value='100'] span{
+
+    width: 100%;
+
+}
+
+progress[value^='9']:not([value^='9.']):not([value='9']) span{
+
+    width: 95%;
+
+}
+
+progress[value^='8']:not([value^='8.']):not([value='8']) span{
+
+    width: 85%;
+
+}
+
+progress[value^='7']:not([value^='7.']):not([value='7']) span{
+
+    width: 75%;
+
+}
+
+progress[value^='6']:not([value^='6.']):not([value='6']) span{
+
+    width: 65%;
+
+}
+
+progress[value^='5']:not([value^='5.']):not([value='5']) span{
+
+    width: 55%;
+
+}
+
+progress[value^='4']:not([value^='4.']):not([value='4']) span{
+
+    width: 45%;
+
+}
+
+progress[value^='3']:not([value^='3.']):not([value='3']) span{
+
+    width: 35%;
+
+}
+
+progress[value^='2']:not([value^='2.']):not([value='2']) span{
+
+    width: 25%;
+
+}
+
+progress[value^='1']:not([value^='1.']):not([value='1']):not([value='100']) span{
+
+    width: 15%;
+
+}
+
+​
+
+progress span{
+
+-webkit-transition: width 1.6s linear;
+
+    -moz-transition: width 1.6s linear;
+
+      -o-transition: width 1.6s linear;
+
+         transition: width 1.6s linear;
+
+}
 
 
 
