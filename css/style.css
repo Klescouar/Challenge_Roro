@@ -7,16 +7,16 @@ body {
 #player {
 width: 717px;
   min-width: 300px;
-  height: 50px;
   background-color: #444;
   margin: 100px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 500px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  min-width: 50px;
   height: 50px;
   background-color: #444;
   border: none;
@@ -24,7 +24,10 @@ width: 717px;
 }
 
 #left-button {
-  min-width: 160px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #time {
@@ -48,9 +51,9 @@ p {
 }
 
 #player-bar{
-  height: 25px;
+  height: 10px;
   background-color: rgb(168, 168, 168);
-  width:50%;
+  width:65%;
   border-radius: 3px;
 }
 
@@ -58,46 +61,9 @@ i {
 	color: #ccc;
 }
 
-
-
-
-
-
-
-
-
-#player2 {
-	display: none;
-	background-color: #444;
-	width: 700px;
-  	min-width: 300px;
-  	background-color: rgb(65, 65, 65);
-  	margin: 100px;
-  	margin-top: 500px;
-}
-#player-top {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 50px;
-	background-color: #444;
-}
 #player-img {
 	width: 50px;
 	height: 50px;
-}
-#player-bot {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 30px;
-	background-color: #777;
-}
-#player-bar2 {
-  height: 5px;
-  background-color: #ccc;
-  width:60%;
-  border-radius: 6px;
 }
 
 #jaquette {
@@ -105,6 +71,14 @@ i {
 	height: 50px;
 }
 
+#queryBot {
+  display: flex;
+width: 70%;
+justify-content: space-between;
+align-items: center;
+flex-grow: 1;
+background-color: #575555;
+}
 
 
 
@@ -116,7 +90,7 @@ i {
 
 
 
-@media all and (max-width: 700px) {
+/*@media all and (max-width: 700px) {
 	#player {
 		display: none;
 	}
@@ -124,4 +98,4 @@ i {
 		display: flex;
 		flex-direction: column;
 	}
-}
+}*/
