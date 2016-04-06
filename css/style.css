@@ -3,17 +3,23 @@
   width: 60%;
   margin: auto;
   height: 50px;
-  background-color: rgb(65, 65, 65);
+  background-color: #555;
   display: flex;
   align-items: center;
 }
 
-input {
-  width: 50px;
-  height: 50px;
-  background-color: rgb(89, 87, 87);
+button {
+  width: 40px;
+  height: 40px;
+  background-color: #555;
   border: none;
   margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+button:first-child {
+	margin-left: 10px;
 }
 
 .time {
@@ -31,7 +37,7 @@ p {
 
 .player-bar{
   height: 25px;
-  background-color: rgb(168, 168, 168);
+  background-color: #888;
   width: 400px;
   border-radius: 3px;
 }
