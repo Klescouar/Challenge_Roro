@@ -1,24 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+}
 
-.player {
-  width: 60%;
-  margin: auto;
+
+#player {
+width: 717px;
+  min-width: 300px;
   height: 50px;
   background-color: rgb(65, 65, 65);
+  margin: 100px;
   display: flex;
   align-items: center;
+  margin-top: 500px;
+}
+
+audio {
+  width: 60%;
+  height: 100px;
 }
 
 input {
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   background-color: rgb(89, 87, 87);
   border: none;
   margin: 0px;
 }
 
-.time {
+#left-button {
+  min-width: 160px;
+}
+
+#time {
     height: 50px;
-    width: 70px;
+    width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#timeLeft {
+    height: 50px;
+    width: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +52,9 @@ p {
   color: rgb(168, 168, 168);
 }
 
-.player-bar{
+#player-bar{
   height: 25px;
   background-color: rgb(168, 168, 168);
-  width: 400px;
+  width:50%;
   border-radius: 3px;
 }
