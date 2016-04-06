@@ -82,11 +82,10 @@ background-color: #575555;
 
 ​
 
-#progress{	
+#progress{
+margin: auto;
+width: 100%;
 
-
-
-}
 
 progress{
 
@@ -97,6 +96,7 @@ progress{
     -moz-box-sizing: border-box;
 
          box-sizing: border-box;
+   width:200%;
          width:70%;
 
     height: 5px;

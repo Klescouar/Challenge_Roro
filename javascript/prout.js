@@ -1,4 +1,4 @@
-
+  
 function modifValues(){
 
     var val = $('#progress progress').attr('value');
