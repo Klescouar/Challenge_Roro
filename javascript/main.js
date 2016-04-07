@@ -8,10 +8,16 @@
     const timePassed = document.getElementById('time');
     const progressBar = document.getElementsByTagName('progress')[0];
     const timeLeft = document.getElementById('timeLeft');
-    const arrayOfSongs = ['02 Common Free Style feat. Common.mp3', '11 Big Weenie.wav',
-                          'GUSH - MASSIVE DRUM.mp3', 'Wonderwall (oasis).mp3',
-                          'ComeTogether.wav'];
-    const currentSong = new Audio(arrayOfSongs[0]);
+    const arrayMappingSongsAndCovers = [
+      ['02 Common Free Style feat. Common.mp3', 'rhfactor'],
+      ['11 Big Weenie.wav', 'eminem'],
+      ['GUSH - MASSIVE DRUM.mp3', 'gush'],
+      ['Wonderwall (oasis).mp3', 'oasis'],
+      ['ComeTogether.wav', 'beatles']
+    ];
+    const mapOfSongsAndCovers = new Map(arrayMappingSongsAndCovers);
+    const covers = [document.getElementById('top'), document.getElementById('image1')];
+    const currentSong = new Audio(arrayMappingSongsAndCovers[0][0]);
     const currentTime = new Date(0);
     const remainingTime = new Date(0);
     let currentSongIndex = 0;
@@ -44,10 +50,13 @@
      *        Toggles between playing and pausing the current track.
      *        If shouldPlay is undefined, toggles as usual but if true keeps using the state before changing the track.
      *        Changes class of the <i> (buttonPlay's child) element to 'fa fa-play' or to 'fa fa-pause'.
+     *        Also sets the corresponding background and img of the song being played.
      * Return:
      *        Nothing.
      */
     const togglePlay = function (shouldPlay = undefined) {
+      covers[0].style.background = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
+      covers[1].src = `images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}.jpg`;
       if ((currentSong.paused === true && shouldPlay === undefined) || (currentSong.paused === true && shouldPlay === true)) {
         currentSong.play();
         if (intervalID === undefined) {
@@ -70,12 +79,12 @@
      */
     const goPrevTrack = function () {
       if (currentSongIndex === 0) {
-        currentSongIndex = arrayOfSongs.length - 1;;
+        currentSongIndex = arrayMappingSongsAndCovers.length - 1;;
       } else {
         currentSongIndex -= 1;
       }
       const shouldPlay = currentSong.paused === false ? true : false;
-      currentSong.src = arrayOfSongs[currentSongIndex];
+      currentSong.src = arrayMappingSongsAndCovers[currentSongIndex][0];
       togglePlay(shouldPlay);
     };
     
@@ -85,14 +94,14 @@
      * Return:
      *        Nothing.
      */
-    const goNextTrack = function () {
-      if (currentSongIndex === arrayOfSongs.length - 1) {
+    const goNextTrack = function (automatic = false) {
+      if (currentSongIndex === arrayMappingSongsAndCovers.length - 1) {
         currentSongIndex = 0;
       } else {
         currentSongIndex += 1;
       }
-      const shouldPlay = currentSong.paused === false ? true : false;
-      currentSong.src = arrayOfSongs[currentSongIndex];
+      const shouldPlay = (automatic === true || currentSong.paused === false) ? true : false;
+      currentSong.src = arrayMappingSongsAndCovers[currentSongIndex][0];
       togglePlay(shouldPlay);
     };
 
@@ -119,10 +128,10 @@
     buttonForward.addEventListener('click', goNextTrack);
     buttonVolume.addEventListener('click', toggleVolume);
     currentSong.addEventListener('ended', function () {
-      goNextTrack();
+      goNextTrack(true);
     });
     currentSong.addEventListener('error', function () {
-      if (arrayOfSongs.length - 1 < 2) {
+      if (arrayMappingSongsAndCovers.length - 1 < 2) {
         /*
          * @TODO: An error message or something if there's no playable song.
          */
@@ -130,6 +139,10 @@
         goNextTrack();
       }
     });
+
+
+    covers[0].style.background = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
+    covers[1].src = `images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}.jpg`;
   }
 
   const myMediaPlayer = MediaPlayer();
