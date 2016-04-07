@@ -3,13 +3,14 @@ body {
 }
 
 #player {
- width: 70%;
- border-radius: 2px solid black;
- display: flex;
- justify-content: center;
- flex-direction: column;
- margin: auto;
+  width: 70%;
+  border-radius: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
 }
+
 #top {
   min-height: 500px;
   background: url('../images/rhfactor_flou.jpeg');
@@ -18,10 +19,9 @@ body {
   background-position: center;
   display: flex;
   align-items: flex-end;
- /*-webkit-filter: blur(1px);*/
- transition: 0.2s all;
-
+  transition: 0.2s all;
 }
+
 #top #image1{
   width: 40%;
   border: 2px solid white;
@@ -30,32 +30,31 @@ body {
   transition: 0.2s all;
 
 }
-/*#top #image2 {
-  height: 40%;
-  with:40%;
-}*/
 
 #middle {
   display: flex;
   align-items: center;
   background-color:#404956;
   color:white;
-  }
+}
 
-  #middle button {
-background-color:rgb(105, 132, 150);
-border-radius: 50%;
-width: 30px;
-height: 30px;
-border: none;
-margin: 5px 20px 5px 0px;
-  }
-  #middle button:hover {
-background-color:rgb(130, 152, 167);
-  }
+#middle button {
+  background-color:rgb(105, 132, 150);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 5px 20px 5px 0px;
+}
+#middle button:hover {
+  background-color:rgb(130, 152, 167);
+}
+#middle button:focus {
+  outline: none;
+}
 
 #middle i {
-color: white;
+  color: white;
 }
 
 #middle p {
@@ -72,9 +71,9 @@ color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-background-color: #c9c8c8;
-border-bottom-right-radius: 6px;
-border-bottom-left-radius: 6px;
+  background-color: #c9c8c8;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 #down .btn {
@@ -91,7 +90,7 @@ border-bottom-left-radius: 6px;
 }
 
 #down .btn:focus {
-outline: none;
+  outline: none;
 }
 
 #down .btn:active {
@@ -103,8 +102,8 @@ outline: none;
   transition: 0.3s all;
 }
 #down .btn:hover i{
-color: rgb(255, 255, 255);
-transition: 0.3s all;
+  color: rgb(255, 255, 255);
+  transition: 0.3s all;
 }
 #down .btn:nth-child(2):hover {
   background-color:#c9c8c8;
@@ -126,141 +125,141 @@ transition: 0.3s all;
 
 }
 #play_pause {
- width: 50px;
+  width: 50px;
   height: 50px;
 }
 i
- {
+{
   color: rgb(80, 80, 80);
   transition: 0.3s all;
 }
 
-/*CODE BARRE DE PROGRESSION */
+/* CODE BARRE DE PROGRESSION */
 
 
 
 #progress{
-margin: auto;
-width: 90%;
+  margin: auto;
+  width: 90%;
 }
 
 progress{
 
 
 
-    display: flex;
+  display: flex;
 
-    -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 
-         box-sizing: border-box;
+  box-sizing: border-box;
 
-    height: 5px;
+  height: 5px;
 
-    padding: 0px;
+  padding: 0px;
 
-     background-color:rgb(29,42,48);
+  background-color:rgb(29,42,48);
 
-    border: 0px solid rgba(0,0,0,.2);
+  border: 0px solid rgba(0,0,0,.2);
 
-    border-radius: 4px;
+  border-radius: 4px;
 
 }
 
-/* Style de la barre pour Chrome*/
+/* Style de la barre pour Chrome */
 
 progress::-webkit-progress-value{
 
 
 
-    border-radius:10px;
+  border-radius:10px;
 
-    background-color:rgb(222,237,234);
+  background-color:rgb(222,237,234);
 
-    background:#3981B0;
+  background:#3981B0;
 
-    background-size: 300px 20px, auto, auto;
+  background-size: 300px 20px, auto, auto;
 
-    background-position: -300px 0, top, top;
+  background-position: -300px 0, top, top;
 
-    background-position: top right, top, top;
+  background-position: top right, top, top;
 
 }
 
 progress::-webkit-progress-bar{
 
-    background: transparent;
+  background: transparent;
 
 }
 
 progress[value='100'] span{
 
-    width: 100%;
+  width: 100%;
 
 }
 
 progress[value^='9']:not([value^='9.']):not([value='9']) span{
 
-    width: 95%;
+  width: 95%;
 
 }
 
 progress[value^='8']:not([value^='8.']):not([value='8']) span{
 
-    width: 85%;
+  width: 85%;
 
 }
 
 progress[value^='7']:not([value^='7.']):not([value='7']) span{
 
-    width: 75%;
+  width: 75%;
 
 }
 
 progress[value^='6']:not([value^='6.']):not([value='6']) span{
 
-    width: 65%;
+  width: 65%;
 
 }
 
 progress[value^='5']:not([value^='5.']):not([value='5']) span{
 
-    width: 55%;
+  width: 55%;
 
 }
 
 progress[value^='4']:not([value^='4.']):not([value='4']) span{
 
-    width: 45%;
+  width: 45%;
 
 }
 
 progress[value^='3']:not([value^='3.']):not([value='3']) span{
 
-    width: 35%;
+  width: 35%;
 
 }
 
 progress[value^='2']:not([value^='2.']):not([value='2']) span{
 
-    width: 25%;
+  width: 25%;
 
 }
 
 progress[value^='1']:not([value^='1.']):not([value='1']):not([value='100']) span{
 
-    width: 15%;
+  width: 15%;
 
 }
 
 progress span{
 
--webkit-transition: width 1.6s linear;
+  -webkit-transition: width 1.6s linear;
 
-    -moz-transition: width 1.6s linear;
+  -moz-transition: width 1.6s linear;
 
-      -o-transition: width 1.6s linear;
+  -o-transition: width 1.6s linear;
 
-         transition: width 1.6s linear;
+  transition: width 1.6s linear;
 
 }
 
@@ -285,25 +284,24 @@ progress span{
     align-items: center;
     transition: 0.2s all;
 
-   /*-webkit-filter: blur(1px);*/
   }
   #top #image1{
     height: 180px;
     width: 260px;
     border: 2px solid white;
-margin: 0px;
+    margin: 0px;
     transition: 0.2s all;
 
   }
 }
 @media all and (max-width: 427px) {
   #middle button {
-background-color:rgb(105, 132, 150);
-border-radius: 50%;
-width: 30px;
-height: 30px;
-border: none;
-margin: 5px 7px 5px 0px;
+    background-color:rgb(105, 132, 150);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 5px 7px 5px 0px;
   }
 
   #top {
@@ -315,7 +313,6 @@ margin: 5px 7px 5px 0px;
     background-position: center;
     display: flex;
     align-items: flex-end;
-   /*-webkit-filter: blur(1px);*/
   }
   #top #image1{
     height: 100%;
@@ -323,26 +320,26 @@ margin: 5px 7px 5px 0px;
     border: 2px solid white;
     margin: 0px;  }
 
-    #down .btn {
-      width: 40px;
-      height: 40px;
-    }
+  #down .btn {
+    width: 40px;
+    height: 40px;
+  }
 
-    #down .btn:focus {
+  #down .btn:focus {
     outline: none;
-    }
+  }
 
-    #down .btn:hover {
-      transition: 0.2s all;
-    }
-    #down .btn:nth-child(2):hover {
-      transition: 0.2s all;
-    }
-    #down .btn:nth-child(2) {
-      margin: 10px 0px 10px 0px;
+  #down .btn:hover {
+    transition: 0.2s all;
+  }
+  #down .btn:nth-child(2):hover {
+    transition: 0.2s all;
+  }
+  #down .btn:nth-child(2) {
+    margin: 10px 0px 10px 0px;
 
-      width: 60px;
-      height: 60px;
-      transition: 0.2s all;
-    }
+    width: 60px;
+    height: 60px;
+    transition: 0.2s all;
+  }
 }

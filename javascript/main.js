@@ -8,7 +8,9 @@
     const timePassed = document.getElementById('time');
     const progressBar = document.getElementsByTagName('progress')[0];
     const timeLeft = document.getElementById('timeLeft');
-    const arrayOfSongs = ['ComeTogether.wav', 'romeo.wav', 'something.wav', 'prev_hitorinbo_envy.mp3'];
+    const arrayOfSongs = ['02 Common Free Style feat. Common.mp3', '11 Big Weenie.wav',
+                          'GUSH - MASSIVE DRUM.mp3', 'Wonderwall (oasis).mp3',
+                          'ComeTogether.wav'];
     const currentSong = new Audio(arrayOfSongs[0]);
     const currentTime = new Date(0);
     const remainingTime = new Date(0);
@@ -45,7 +47,7 @@
      * Return:
      *        Nothing.
      */
-    const togglePlay = function (event, shouldPlay = undefined) {
+    const togglePlay = function (shouldPlay = undefined) {
       if ((currentSong.paused === true && shouldPlay === undefined) || (currentSong.paused === true && shouldPlay === true)) {
         currentSong.play();
         if (intervalID === undefined) {
@@ -111,7 +113,9 @@
     };
 
     buttonBackward.addEventListener('click', goPrevTrack);
-    buttonPlay.addEventListener('click', togglePlay);
+    buttonPlay.addEventListener('click', function () {
+      togglePlay();
+    });
     buttonForward.addEventListener('click', goNextTrack);
     buttonVolume.addEventListener('click', toggleVolume);
     currentSong.addEventListener('ended', function () {
