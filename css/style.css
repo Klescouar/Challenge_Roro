@@ -1,83 +1,70 @@
-body {
+#player {
+  height: 70%;
+ width: 70%;
+ border-radius: 2px solid black;
+ display: flex;
+ flex-direction: column;
+}
+#top {
+  background: url('../images/thylacine_4_by_romainriviere.jpg');
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+ /*-webkit-filter: blur(1px);*/
+}
+#top #image1{
+  height: 40%;
+  width: 26%;
+  margin-left: 9%;
+  border: 2px solid white;
+  margin-top: 40%;
+  margin-bottom: 20px;
+}
+/*#top #image2 {
+  height: 40%;
+  with:40%;
+}*/
+
+#middle {
+  display: flex;
+  background-color:#404956;
+  color:white;
+  margin-bottom: 20px;
+  }
+#time {
+  margin-left: 15px;
+  margin-top: 4px;
+}
+#timeLeft{
+  margin-right: 15px;
+  margin-top: 4px;
+}
+#down {
   display: flex;
   justify-content: center;
-}
-
-
-#player {
-width: 75%;
-  min-width: 300px;
-  background-color: #444;
-  margin: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 500px;
-  flex-wrap: wrap;
 }
 
 .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  background-color:rgb(68,84,95);
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 1px solid white;
+}
+.fa-play {
+  font-size: 30px;
+
+}
+#play_pause {
+ width: 50px;
   height: 50px;
-  background-color: #444;
-  border: none;
-  margin: 0px;
-  width: 50px;
 }
-
-#left-button {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+i
+ {
+  color: rgb(222,237,234);
 }
-
-#time {
-    height: 50px;
-    width: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#timeLeft {
-    height: 50px;
-    width: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-p {
-  margin: 0px;
-  color: rgb(168, 168, 168);
-}
-
-
-
-i {
-	color: #ccc;
-}
-
-#player-img {
-	width: 50px;
-	height: 50px;
-}
-
-#jaquette {
-	width: 50px;
-	height: 50px;
-}
-
-#queryBot {
-display: flex;
-min-width: 60%;
-justify-content: center;
-align-items: center;
-flex-grow: 1;
-background-color: #575555;
-}
-
-
-
 
 /*CODE BARRE DE PROGRESSION */
 
@@ -85,7 +72,7 @@ background-color: #575555;
 
 #progress{
 margin: auto;
-width: 100%;
+width: 80%;
 }
 
 progress{
@@ -102,7 +89,7 @@ progress{
 
     padding: 0px;
 
-    background: rgba(242,242,242,.9);
+     background-color:rgb(29,42,48);
 
     border: 0px solid rgba(0,0,0,.2);
 
@@ -118,11 +105,9 @@ progress::-webkit-progress-value{
 
     border-radius:10px;
 
-    background: #09c;
+    background-color:rgb(222,237,234);
 
-    background:
-
-      rgba(125,125,125,.9);
+    background:#3981B0;
 
     background-size: 300px 20px, auto, auto;
 
