@@ -5,10 +5,10 @@ body {
 
 
 #player {
-width: 717px;
+width: 75%;
   min-width: 300px;
   background-color: #444;
-  margin: 100px;
+  margin: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +21,7 @@ width: 717px;
   background-color: #444;
   border: none;
   margin: 0px;
+  width: 50px;
 }
 
 #left-button {
@@ -67,9 +68,9 @@ i {
 }
 
 #queryBot {
-  display: flex;
-width: 70%;
-justify-content: space-between;
+display: flex;
+min-width: 60%;
+justify-content: center;
 align-items: center;
 flex-grow: 1;
 background-color: #575555;
@@ -80,12 +81,12 @@ background-color: #575555;
 
 /*CODE BARRE DE PROGRESSION */
 
-​
+
 
 #progress{
 margin: auto;
 width: 100%;
-
+}
 
 progress{
 
@@ -96,8 +97,6 @@ progress{
     -moz-box-sizing: border-box;
 
          box-sizing: border-box;
-   width:200%;
-         width:70%;
 
     height: 5px;
 
@@ -110,8 +109,6 @@ progress{
     border-radius: 4px;
 
 }
-
-​
 
 /* Style de la barre pour Chrome*/
 
@@ -133,19 +130,13 @@ progress::-webkit-progress-value{
 
     background-position: top right, top, top;
 
-​
-
 }
-
-​
 
 progress::-webkit-progress-bar{
 
     background: transparent;
 
 }
-
-​
 
 progress[value='100'] span{
 
@@ -206,8 +197,6 @@ progress[value^='1']:not([value^='1.']):not([value='1']):not([value='100']) span
     width: 15%;
 
 }
-
-​
 
 progress span{
 
