@@ -8,12 +8,13 @@
     const timePassed = document.getElementById('time');
     const progressBar = document.getElementsByTagName('progress')[0];
     const timeLeft = document.getElementById('timeLeft');
+    const title = document.getElementById('title');
     const arrayMappingSongsAndCovers = [
-      ['02 Common Free Style feat. Common.mp3', 'rhfactor'],
-      ['11 Big Weenie.wav', 'eminem'],
-      ['GUSH - MASSIVE DRUM.mp3', 'gush'],
-      ['Wonderwall (oasis).mp3', 'oasis'],
-      ['ComeTogether.wav', 'beatles']
+      ['Common Free Style', 'RH-factor'],
+      ['Big Weenie', 'Eminem'],
+      ['MASSIVE DRUM', 'Gush'],
+      ['Wonderwall', 'Oasis'],
+      ['ComeTogether', 'Beatles']
     ];
     const mapOfSongsAndCovers = new Map(arrayMappingSongsAndCovers);
     const covers = [document.getElementById('top'), document.getElementById('image1')];
@@ -31,6 +32,7 @@
      * Return:
      *        Nothing.
      */
+
     const startTiming = function () {
       intervalID = setInterval(function () {
         if (currentSong.readyState > 1 ) {
@@ -54,7 +56,10 @@
      * Return:
      *        Nothing.
      */
+     console.log(arrayMappingSongsAndCovers[0]);
+
     const togglePlay = function (shouldPlay = undefined) {
+      document.getElementById("title").innerHTML = arrayMappingSongsAndCovers[currentSongIndex];
        covers[0].style.backgroundSize= "cover";
        covers[0].style.backgroundPosition= "center";
        covers[0].style.backgroundImage = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
@@ -80,8 +85,10 @@
      *        Nothing.
      */
     const goPrevTrack = function () {
+
       if (currentSongIndex === 0) {
-        currentSongIndex = arrayMappingSongsAndCovers.length - 1;;
+        currentSongIndex = arrayMappingSongsAndCovers.length - 1;
+
       } else {
         currentSongIndex -= 1;
       }
@@ -100,7 +107,11 @@
       if (currentSongIndex === arrayMappingSongsAndCovers.length - 1) {
         currentSongIndex = 0;
       } else {
+        document.getElementById("title").innerHTML = arrayMappingSongsAndCovers[currentSongIndex];
+
         currentSongIndex += 1;
+        console.log(currentSongIndex);
+        console.log(arrayMappingSongsAndCovers[currentSongIndex]);
       }
       const shouldPlay = (automatic === true || currentSong.paused === false) ? true : false;
       currentSong.src = arrayMappingSongsAndCovers[currentSongIndex][0];
