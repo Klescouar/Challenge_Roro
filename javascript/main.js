@@ -55,7 +55,9 @@
      *        Nothing.
      */
     const togglePlay = function (shouldPlay = undefined) {
-      covers[0].style.background = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
+       covers[0].style.backgroundSize= "cover";
+       covers[0].style.backgroundPosition= "center";
+       covers[0].style.backgroundImage = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
       covers[1].src = `images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}.jpg`;
       if ((currentSong.paused === true && shouldPlay === undefined) || (currentSong.paused === true && shouldPlay === true)) {
         currentSong.play();
@@ -87,7 +89,7 @@
       currentSong.src = arrayMappingSongsAndCovers[currentSongIndex][0];
       togglePlay(shouldPlay);
     };
-    
+
     /*
      * goNextTrack()
      *        Checks playing state before changing the current track to the next one in the arrayOfSongs.
@@ -141,7 +143,7 @@
     });
 
 
-    covers[0].style.background = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
+    covers[0].style.backgroundImage = `url('images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}_blurred.jpg')`;
     covers[1].src = `images/${mapOfSongsAndCovers.get(arrayMappingSongsAndCovers[currentSongIndex][0])}.jpg`;
   }
 

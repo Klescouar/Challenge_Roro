@@ -1,7 +1,6 @@
 body {
   background-color: rgb(62, 62, 62);
 }
-
 #player {
   width: 70%;
   border-radius: 2px solid black;
@@ -10,7 +9,6 @@ body {
   flex-direction: column;
   margin: auto;
 }
-
 #top {
   min-height: 500px;
   background-color: black;
@@ -21,25 +19,21 @@ body {
   align-items: flex-end;
   transition: 0.2s all;
 }
-
-#top #image1{
+#top #image1 {
   width: 40%;
   border: 2px solid white;
   margin-bottom: 20px;
   margin-left: 20px;
   transition: 0.2s all;
-
 }
-
 #middle {
   display: flex;
   align-items: center;
-  background-color:#404956;
-  color:white;
+  background-color: #404956;
+  color: white;
 }
-
 #middle button {
-  background-color:rgb(105, 132, 150);
+  background-color: rgb(105, 132, 150);
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -47,24 +41,21 @@ body {
   margin: 5px 20px 5px 0px;
 }
 #middle button:hover {
-  background-color:rgb(130, 152, 167);
+  background-color: rgb(130, 152, 167);
 }
 #middle button:focus {
   outline: none;
 }
-
 #middle i {
   color: white;
 }
-
 #middle p {
   margin: 0;
 }
-
 #time {
   margin-left: 15px;
 }
-#timeLeft{
+#timeLeft {
   margin-right: 15px;
 }
 #down {
@@ -75,7 +66,6 @@ body {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-
 #down .btn {
   width: 50px;
   height: 50px;
@@ -88,222 +78,136 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 #down .btn:focus {
   outline: none;
 }
-
-#down .btn:active {
-}
-
+#down .btn:active {}
 #down .btn:hover {
   background-color: #c9c8c8;
-
   transition: 0.3s all;
 }
-#down .btn:hover i{
+#down .btn:hover i {
   color: rgb(255, 255, 255);
   transition: 0.3s all;
 }
 #down .btn:nth-child(2):hover {
-  background-color:#c9c8c8;
+  background-color: #c9c8c8;
   transition: 0.3s all;
 }
 #down .btn:nth-child(2) {
   margin: 5px 0px 5px 0px;
-
   width: 65px;
   height: 65px;
   transition: 0.3s all;
 }
-
-
-
-
 .fa-play {
   font-size: 40px;
-
 }
 #play_pause {
   width: 50px;
   height: 50px;
 }
-i
-{
+i {
   color: rgb(80, 80, 80);
   transition: 0.3s all;
 }
 
 /* CODE BARRE DE PROGRESSION */
 
-
-
-#progress{
+#progress {
   margin: auto;
   width: 90%;
 }
-
-progress{
-
-
-
+progress {
   display: flex;
-
   -moz-box-sizing: border-box;
-
   box-sizing: border-box;
-
   height: 5px;
-
   padding: 0px;
-
-  background-color:rgb(29,42,48);
-
-  border: 0px solid rgba(0,0,0,.2);
-
+  background-color: rgb(29, 42, 48);
+  border: 0px solid rgba(0, 0, 0, .2);
   border-radius: 4px;
-
 }
 
 /* Style de la barre pour Chrome */
 
-progress::-webkit-progress-value{
-
-
-
-  border-radius:10px;
-
-  background-color:rgb(222,237,234);
-
-  background:#3981B0;
-
+progress::-webkit-progress-value {
+  border-radius: 10px;
+  background-color: rgb(222, 237, 234);
+  background: #3981B0;
   background-size: 300px 20px, auto, auto;
-
   background-position: -300px 0, top, top;
-
   background-position: top right, top, top;
-
 }
-
-progress::-webkit-progress-bar{
-
+progress::-webkit-progress-bar {
   background: transparent;
-
 }
-
-progress[value='100'] span{
-
+progress[value='100'] span {
   width: 100%;
-
 }
-
-progress[value^='9']:not([value^='9.']):not([value='9']) span{
-
+progress[value^='9']:not([value^='9.']):not([value='9']) span {
   width: 95%;
-
 }
-
-progress[value^='8']:not([value^='8.']):not([value='8']) span{
-
+progress[value^='8']:not([value^='8.']):not([value='8']) span {
   width: 85%;
-
 }
-
-progress[value^='7']:not([value^='7.']):not([value='7']) span{
-
+progress[value^='7']:not([value^='7.']):not([value='7']) span {
   width: 75%;
-
 }
-
-progress[value^='6']:not([value^='6.']):not([value='6']) span{
-
+progress[value^='6']:not([value^='6.']):not([value='6']) span {
   width: 65%;
-
 }
-
-progress[value^='5']:not([value^='5.']):not([value='5']) span{
-
+progress[value^='5']:not([value^='5.']):not([value='5']) span {
   width: 55%;
-
 }
-
-progress[value^='4']:not([value^='4.']):not([value='4']) span{
-
+progress[value^='4']:not([value^='4.']):not([value='4']) span {
   width: 45%;
-
 }
-
-progress[value^='3']:not([value^='3.']):not([value='3']) span{
-
+progress[value^='3']:not([value^='3.']):not([value='3']) span {
   width: 35%;
-
 }
-
-progress[value^='2']:not([value^='2.']):not([value='2']) span{
-
+progress[value^='2']:not([value^='2.']):not([value='2']) span {
   width: 25%;
-
 }
-
-progress[value^='1']:not([value^='1.']):not([value='1']):not([value='100']) span{
-
+progress[value^='1']:not([value^='1.']):not([value='1']):not([value='100']) span {
   width: 15%;
-
 }
-
-progress span{
-
+progress span {
   -webkit-transition: width 1.6s linear;
-
   -moz-transition: width 1.6s linear;
-
   -o-transition: width 1.6s linear;
-
   transition: width 1.6s linear;
-
 }
-
-
-
-
-
-
-
-
-
 @media all and (max-width: 730px) {
   #top {
-    min-height: 300px;
     background: none;
     background-color: rgb(18, 18, 18);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.2s all;
-
   }
-  #top #image1{
-    height: 180px;
+  #top #image1 {
+    height: 200px;
     width: 260px;
     border: 2px solid white;
     margin: 0px;
     transition: 0.2s all;
-
   }
 }
 @media all and (max-width: 427px) {
   #middle button {
-    background-color:rgb(105, 132, 150);
+    background-color: rgb(105, 132, 150);
     border-radius: 50%;
     width: 30px;
     height: 30px;
     border: none;
     margin: 5px 7px 5px 0px;
   }
-
   #top {
     min-height: 0px;
     background: none;
@@ -314,21 +218,19 @@ progress span{
     display: flex;
     align-items: flex-end;
   }
-  #top #image1{
+  #top #image1 {
     height: 100%;
     width: 100%;
     border: 2px solid white;
-    margin: 0px;  }
-
+    margin: 0px;
+  }
   #down .btn {
     width: 40px;
     height: 40px;
   }
-
   #down .btn:focus {
     outline: none;
   }
-
   #down .btn:hover {
     transition: 0.2s all;
   }
@@ -337,7 +239,6 @@ progress span{
   }
   #down .btn:nth-child(2) {
     margin: 10px 0px 10px 0px;
-
     width: 60px;
     height: 60px;
     transition: 0.2s all;
